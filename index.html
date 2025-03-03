@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support - Case Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Customer Support - Case Management</h1>
+
+    <!-- Search & Filter -->
+    <div>
+        <input type="text" id="searchName" placeholder="Search by Customer Name">
+        <select id="filterChannel">
+            <option value="">All Channels</option>
+            <option value="AI">AI</option>
+            <option value="Call">Call</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Email">Email</option>
+        </select>
+        <button onclick="searchCases()">Search</button>
+    </div>
+
+    <!-- Case List Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Query</th>
+                <th>Channel</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="caseTableBody">
+            <!-- Cases will be dynamically loaded here -->
+        </tbody>
+    </table>
+
+    <!-- Form to Add New Case -->
+    <h2>Add New Case</h2>
+    <form id="caseForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="queryText" placeholder="Query" required>
+        <select id="caseChannel">
+            <option value="AI">AI</option>
+            <option value="Call">Call</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Email">Email</option>
+        </select>
+        <button type="submit">Add Case</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
